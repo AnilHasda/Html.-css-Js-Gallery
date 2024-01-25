@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta name="viewport"content="width=device-width,initial-scale=1.0">
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+.heading{
+height:60px;
+width:100%;
+background:#1791b1;
+color:green;
+position:fixed;
+z-index:4;
+top:0;
+display:grid;
+place-items:center;
+}
+.container{
+display:grid;
+border:1px solid red;
+grid-gap:10px;
+width:100vw;
+background:gray;
+height:auto;
+grid-template-columns:repeat(3,1fr);
+row-gap:10px;
+z-index:2;
+}
+img{
+width:100%;
+cursor:pointer;
+}
+.main{
+margin-top:60px;
+height:auto;
+width:100%;
+display:flex;
+position:relative;
+}
+img:hover{
+border:2px solid green;
+}
+.show{
+height:95vh;
+width:100vw;
+background:#000;
+display:grid;
+place-items:center;
+z-index:3;
+display:none;
+}
+.back{
+position:absolute;
+left:10;
+height:30px;
+width:100px;
+}
+</style>
+</head>
+<body>
+<div class="heading">
+<button class="back"onclick="location.reload()">Back</button>
+<h1>Gallery</h1>
+</div>
+<div class="main">
+<div class="show"><img stc=""alt="alt"class="pic"></img></div>
+<div class="container">
+<img src="img1.jpg"onclick="b('img1.jpg')"></img>
+<img src="img2.jpg"onclick="b('img2.jpg')"></img>
+<img src="img3.jpg"onclick="b('img3.jpg')"></img>
+<img src="img4.jpg"onclick="b('img4.jpg')"></img>
+<img src="img5.jpg"onclick="b('img5.jpg')"></img>
+<img src="img6.jpg"onclick="b('img6.jpg')"></img>
+<img src="img7.jpg"onclick="b('img7.jpg')"></img>
+<img src="img8.jpg"onclick="b('img8.jpg')"></img>
+<img src="img9.jpg"onclick="b('img9.jpg')"></img>
+<img src="img10.jpg"onclick="b('img10.jpg')"></img>
+<img src="img1.jpg"onclick="b('img1.jpg')"></img>
+<img src="img12.jpg"onclick="b('img12.jpg')"></img>
+<img src="img1.jpg"onclick="b('img1.jpg')"></img>
+<img src="img2.jpg"onclick="b('img2.jpg')"></img>
+<img src="img3.jpg"onclick="b('img3.jpg')"></img>
+<img src="img4.jpg"onclick="b('img4.jpg')"></img>
+<img src="img5.jpg"onclick="b('img5.jpg')"></img>
+<img src="img6.jpg"onclick="b('img6.jpg')"></img>
+<img src="img7.jpg"onclick="b('img7.jpg')"></img>
+<img src="img8.jpg"onclick="b('img8.jpg')"></img>
+<img src="img9.jpg"onclick="b('img9.jpg')"></img>
+<img src="img10.jpg"onclick="b('img10.jpg')"></img>
+<img src="img1.jpg"onclick="b('img1.jpg')"></img>
+<img src="img12.jpg"onclick="b('img12.jpg')"></img>
+</div>
+<script type="text/javascript">
+function b(a){
+let container=document.querySelector(".container");
+container.style.display="none";
+let show=document.querySelector(".show");
+show.style.display="grid";
+
+let pic=document.querySelector('.pic');
+pic.src=a;
+}
+</script>
+</body>
+</html>
